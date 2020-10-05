@@ -1,0 +1,15 @@
+Package: metacom
+Type: Package
+Title: Fits models to tailor selection and drift processes in metacommunities
+Version: 0.1.0
+Author: Sara R Mortara
+Maintainer: Sara R Mortara <saramortara@gmail.com>
+Description: This package fits metacommunity glmm models and calculates the partioned R-squared.
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
+Imports:
+    lme4,
+    bbmle,
+    lattice
