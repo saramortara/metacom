@@ -4,15 +4,12 @@
 \alias{r2_drift}
 \title{Calculates partinioned R-squared for drift model}
 \usage{
-r2_drift(model, null.model)
+r2_drift(model, null_model)
 }
 \arguments{
 \item{model}{drift model}
 
-\item{null.model}{the correspondent null model}
-}
-\value{
-
+\item{null_model}{the correspondent null model}
 }
 \description{
 Calculates partinioned R-squared for drift model

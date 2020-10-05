@@ -1,15 +1,14 @@
 #' Calculates partinioned R-squared for drift model
 #'
 #' @param model drift model
-#' @param null.model the correspondent null model
+#' @param null_model the correspondent null model
 #'
-#' @return
 #' @export
 #'
-r2_drift <- function(model, null.model){
+r2_drift <- function(model, null_model){
 
   ## Calculates null model
-  if (missing(null.model)) {
+  if (missing(null_model)) {
     m0 <- best_null(model)
   } else {
     m0 <- null.model
@@ -37,10 +36,10 @@ r2_drift <- function(model, null.model){
   r2res <- 1 - r2t
   ## Partitioning R2 GLMM for each random effect
   r2rand.part <- VarR/deno
-  r2.tab <- data.frame(component=c("conditional", "fixed", "random",
+  r2.tab <- data.frame(component = c("conditional", "fixed", "random",
                                    names(VarR)),
-                       R2=c(r2t,r2f,r2rand, r2rand.part),
-                       type=c("all", "niche", "all.random", "neutral",  "neutral", "neutral"))
+                       R2 = c(r2t,r2f,r2rand, r2rand.part),
+                       type = c("all", "niche", "all.random", "neutral",  "neutral", "neutral"))
   r2.partition <- aggregate(r2.tab$R2, list(type = r2.tab$type), sum)
   names(r2.partition)[2] <- "R2.partition"
   R2 <- r2.tab$R2

@@ -1,26 +1,15 @@
 #' Calculates partinioned R-squared for selection model
 #'
 #' @param model selection model
-#' @param null.model the correspondent null model
+#' @param null_model the correspondent null model
 #'
-#' @return
 #' @export
 #'
-r2_selection <- function(model, null.model){
+r2_selection <- function(model, null_model){
   # NO TRAITS
-  ## Function to calculate the null model, model with all random terms
-  best.null <- function(model) {
-    parens <- function(x) paste0("(",x,")")
-    onlyBars <- function(form) reformulate(sapply(findbars(form),
-                                                  function(x)  parens(deparse(x))),
-                                           response = ".")
-    onlyBars(formula(model))
-    best.null <- update(model,onlyBars(formula(model)), ...)
-    return(best.null)
-  }
   ## Calculates null model
-  if (missing(null.model))
-    m0 <- best.null(model)
+  if (missing(null_model))
+    m0 <- best_null(model)
   else
     m0 <- null.model
   ## Variance for fixed effects

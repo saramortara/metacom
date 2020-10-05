@@ -9,10 +9,7 @@ r2_selection_drift(model, null_model)
 \arguments{
 \item{model}{drift model}
 
-\item{null.model}{the correspondent null model}
-}
-\value{
-
+\item{null_model}{the correspondent null model}
 }
 \description{
 Calculates partinioned R-squared for selection-drift model

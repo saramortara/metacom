@@ -1,4 +1,9 @@
-## Function to calculate the null model, model with all random terms
+#' Calculates the null model, model with all random terms
+#'
+#' @param model any GLMM model
+#'
+#' @export
+#'
 best_null <- function(model) {
   parens <- function(x) paste0("(", x, ")")
   onlyBars <- function(form) reformulate(sapply(findbars(form),

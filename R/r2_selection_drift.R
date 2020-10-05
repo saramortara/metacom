@@ -1,9 +1,8 @@
 #' Calculates partinioned R-squared for selection-drift model
 #'
 #' @param model drift model
-#' @param null.model the correspondent null model
+#' @param null_model the correspondent null model
 #'
-#' @return
 #' @export
 #'
 r2_selection_drift <- function(model, null_model){

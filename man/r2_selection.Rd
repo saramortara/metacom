@@ -4,15 +4,12 @@
 \alias{r2_selection}
 \title{Calculates partinioned R-squared for selection model}
 \usage{
-r2_selection(model, null.model)
+r2_selection(model, null_model)
 }
 \arguments{
 \item{model}{selection model}
 
-\item{null.model}{the correspondent null model}
-}
-\value{
-
+\item{null_model}{the correspondent null model}
 }
 \description{
 Calculates partinioned R-squared for selection model
